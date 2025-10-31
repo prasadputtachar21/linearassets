@@ -12,11 +12,13 @@
     function processURLParams() {
         const urlParams = new URLSearchParams(window.location.search);
         const AssetId = urlParams.get('assetid');
+        console.log(AssetId);
+
         const spatialStudioProjectElement = document.getElementById('spatial-studio-project-1');
         const COLUMN_NAME ='ID';
         const LAYER_ID = '786df3e843178cd51f229f454153d889';
 
-        const VALUES = AssetId;
+        const VALUES = 1;
         if (AssetId )
         {
 
