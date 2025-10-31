@@ -12,13 +12,14 @@
         console.log(assetid);
 
         
+        const Assetarray = [assetid];
       
 
   
 
 const layerId = '786df3e843178cd51f229f454153d889';
 const columnName = 'ID';
-const values = [1];
+const values = Assetarray;
 
 studioProjectElement.filterFeatures(layerId, columnName, values);
 
