@@ -23,8 +23,12 @@
     </spatial-studio-project>
 
 
+   <button onclick="myFunction()">Click Me</button>
+
+    <p id="demo"></p>
+
     <script>
-    function processURLParams() {
+        function processURLParams() {
 
       const studioProjectElement = document.getElementById('spatial-studio-project-1');
         const urlParams = new URLSearchParams(window.location.search);
@@ -46,7 +50,9 @@ studioProjectElement.filterFeatures(layerId, columnName, values);
     
 
     }
-</script>
+    </script>
+    
+
 
 
 </div>
