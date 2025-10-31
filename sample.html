@@ -15,14 +15,9 @@
     function processURLParams() {
 
 
-        const studioProjectElement = document.getElementById('spatial-studio-project-1');
-
-const layerId = '786df3e843178cd51f229f454153d889';
-const columnName = 'EQUIPMENT';
-const values = ['Bourke Rd Section 1 Start','Bourke Rd Section 2 Start'];
-
-studioProjectElement.filterFeatures(layerId, columnName, values);
-
+        const urlParams = new URLSearchParams(window.location.search);
+        const assetid = urlParams.get('assetid');
+        console.log(assetid);
     
 
     }
