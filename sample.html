@@ -7,29 +7,16 @@
 <script>
     function processURLParams() {
 
-         const spatialStudioProjectElement = document.getElementById('LinearAsset');
 
- 
-      
+        const studioProjectElement = document.getElementById('spatial-studio-project-1');
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const assetid = urlParams.get('assetid');
-        console.log(assetid);
+const layerId = '786df3e843178cd51f229f454153d889';
+const columnName = 'ID';
+const values = [1, 2];
 
-       
-        const COLUMN_NAME ='ID';
-        const LAYER_ID = '786df3e843178cd51f229f454153d889';
+studioProjectElement.filterFeatures(layerId, columnName, values);
 
-        const VALUES = [1, 2];
-      
-
-        if (VALUES)
-        {
-
-            spatialStudioProjectElement.filterFeatures(LAYER_ID, COLUMN_NAME, VALUES);
-        } else {
-            spatialStudioProjectElement.clearFilters && spatialStudioProjectElement.clearFilters(LAYER_ID); 
-        }
+    
 
     }
   </script> 
@@ -43,7 +30,7 @@
 
 <div style="width:100%; height: 75vh;">
     <spatial-studio-project 
-        id="LinearAsset"
+        id="spatial-studio-project-1"
         server-url="https://spatial.withoracle.cloud/spatialstudio/"
         project-id="e6311a90a5f95c01cd6a6260a41f85e0" 
         token="eyJ0eXAiOiJzZ3RlY2hfand0IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI3YTYzMGU2ODhkZDQ0Y2YzYjhjYzgxNTQ3NzRhODJkYSIsInN0dWRpb190ZW5hbnRfaWRlbnRpZmllciI6IkdMT0JBTDpAZGF0YWJhc2VAOkBkZWZhdWx0QCIsIm5iZiI6MTc2MTkwMzc2NCwic2NvcGUiOiJyZXNvdXJjZS5yZWFkX29ubHk6cmVzb3VyY2UudHlwZS5lbWJlZGRlZF9wdWJsaXNoZWRfcHJvamVjdCIsImlzcyI6Ik9yYWNsZVNwYXRpYWxTdHVkaW8iLCJleHAiOjE3NjI1MDM3MDQsImlhdCI6MTc2MTkwMzc2NCwianRpIjoiNzU5ZTViZmMtZTY3OS00ODhjLTg3NzAtMTk3ZTM5MDY1NmRlIiwic3R1ZGlvX29pZCI6IjRiMTg5MTZhMjIxOGM5MDEyYjlhMDMzMzVkNjU4NGFiIn0.Zz-szHRjOWAKN7DXiYqz6F9YpHofxiAXNV-jkPWXOK2qHanXMg7S3FtaKsEJLefvqUVHk8BLzn7TtG7l21axhgQ0FCLO80j8YI5SUkP7yYty1jO51dqg0inOaxLIm1aG3Xp5JPPYDFeMmZAFXdjkg6B8qD-ljJ4tUGKBWeMRxau6WaQd2Yud9tHMUvII0YeCT70bMydHjazYAHmETocOteXhTswPHmo4UQ40zR8Amm6Q07lPlLR_gpRiQQQCIn7uccUd051WZL0Gb1lmdsWuTgrEE73_kCB4bpsUv5jECAZhEYY8gUCEQmrcnHi-jb60gihJMU-3HnzlGYjFLUvXRg"
