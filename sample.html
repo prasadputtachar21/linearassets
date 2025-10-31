@@ -7,15 +7,15 @@
 <script>
     function processURLParams() {
         const urlParams = new URLSearchParams(window.location.search);
-        const AssetId = urlParams.get('assetid');
-        console.log(AssetId);
+        const assetid = urlParams.get('assetid');
+        console.log(assetid);
 
-        const spatialStudioProjectElement = document.getElementById('spatial-studio-project-1');
+        const spatialStudioProjectElement = "spatial-studio-project-1";
         const COLUMN_NAME ='ID';
         const LAYER_ID = '786df3e843178cd51f229f454153d889';
 
         const VALUES = 1;
-        if (AssetId )
+        if (VALUES)
         {
 
             spatialStudioProjectElement.filterFeatures(LAYER_ID, COLUMN_NAME, VALUES);
