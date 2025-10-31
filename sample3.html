@@ -6,25 +6,22 @@
 <script>
     function processURLParams() {
 
-const spatialStudioProjectElement = document.getElementById('spatial-studio-project-1');
+
         const urlParams = new URLSearchParams(window.location.search);
         const assetid = urlParams.get('assetid');
         console.log(assetid);
 
-        const COLUMN_NAME ='ID';
-        const LAYER_ID = '786df3e843178cd51f229f454153d889';
-
-        const VALUES = assetid;
+        
       
 
-        if (VALUES)
-        {
- console.log('filter values');
-            spatialStudioProjectElement.filterFeatures(LAYER_ID, COLUMN_NAME, VALUES);
-        } else {
-             console.log('clear filter ');
-            spatialStudioProjectElement.clearFilters && spatialStudioProjectElement.clearFilters(LAYER_ID); 
-        }
+        const studioProjectElement = document.getElementById('spatial-studio-project-1');
+
+const layerId = '786df3e843178cd51f229f454153d889';
+const columnName = 'ID';
+const values = assetid;
+
+studioProjectElement.filterFeatures(layerId, columnName, values);
+
     
 
     }
