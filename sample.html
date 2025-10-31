@@ -4,6 +4,13 @@
 <script src="https://spatial.withoracle.cloud/spatialstudio/api/v1/embeddable.js"></script>
 
 
+
+</head>
+
+
+<body onload="processURLParams()">
+
+   
 <script>
     function processURLParams() {
 
@@ -20,13 +27,6 @@ studioProjectElement.filterFeatures(layerId, columnName, values);
 
     }
   </script> 
-
-</head>
-
-
-<body onload="processURLParams()">
-
-   
 
 <div style="width:100%; height: 75vh;">
     <spatial-studio-project 
