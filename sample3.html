@@ -2,11 +2,11 @@
 <head>
 <script src="https://requirejs.org/docs/release/2.3.7/minified/require.js"></script>    
 <script src="https://spatial.withoracle.cloud/spatialstudio/api/v1/embeddable.js"></script>
-<script src="https://spatial.withoracle.cloud/spatialstudio/api/v1/spatialstudio.js"></script>
+
 <script>
     function processURLParams() {
 
-
+      const studioProjectElement = document.getElementById('spatial-studio-project-1');
         const urlParams = new URLSearchParams(window.location.search);
         const assetid = urlParams.get('assetid');
         console.log(assetid);
@@ -14,7 +14,7 @@
         
       
 
-        const studioProjectElement = document.getElementById('spatial-studio-project-1');
+  
 
 const layerId = '786df3e843178cd51f229f454153d889';
 const columnName = 'ID';
