@@ -7,7 +7,7 @@
 </head>
 
 
-<body onload="processURLParams()">
+<body>
 
    
 
@@ -23,6 +23,7 @@
     </spatial-studio-project>
 
 
+    <script>
     function processURLParams() {
 
       const studioProjectElement = document.getElementById('spatial-studio-project-1');
@@ -45,7 +46,7 @@ studioProjectElement.filterFeatures(layerId, columnName, values);
     
 
     }
-
+</script>
 
 
 </div>
