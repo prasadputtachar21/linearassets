@@ -25,16 +25,11 @@
         const urlParams = new URLSearchParams(window.location.search);
         const assetid = urlParams.get('assetid');
         console.log (assetid);
-        VALUES = [1];
+        values = [1];
 
- 
-     if (VALUES){
-
-    spatialStudioProjectElement.filterFeatures(LAYER_ID, COLUMN_NAME, VALUES);
-    } else {
-    spatialStudioProjectElement.clearFilters && spatialStudioProjectElement.clearFilters(LAYER_ID);
-        }    
-
+spatialStudioProjectElement.clearFilters(layerId);
+studioProjectElement.filterFeatures(layerId, columnName, values);
+   
    
  
 
