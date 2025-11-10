@@ -3,27 +3,44 @@
 <script src="https://requirejs.org/docs/release/2.3.7/minified/require.js"></script>    
 <script src="https://spatial.withoracle.cloud/spatialstudio/api/v1/embeddable.js?ex=kobinding"></script>
 
-<script>
-    function processURLParams() {
-
-console.log("Entered processURLParams :");
-        const urlParams = new URLSearchParams(window.location.search);
-        const assetid = urlParams.get('assetid');
-        console.log (assetid);
-    
-
-    const LAYER_ID = 'a9fcbda879dde279cdb8fc3ebbe74230';
-    const spatialStudioProjectElement = document.getElementById('spatial-studio-project-1');
-    spatialStudioProjectElement.clearFilters && spatialStudioProjectElement.clearFilters(LAYER_ID);
-
-    }
-  </script> 
 
 
 </head>
 
 
 <body onload="processURLParams()">
+
+     <script>
+
+        function processURLParams() {
+
+      console.log("Entered processURLParams :");
+        const urlParams = new URLSearchParams(window.location.search);
+        const assetid = urlParams.get('assetid');
+        console.log (assetid);
+    const Assetarray = Array.of(assetid);
+
+    const LAYER_ID = 'a9fcbda879dde279cdb8fc3ebbe74230';
+    const spatialStudioProjectElement = document.getElementById('spatial-studio-project-1');
+
+
+  
+
+     const VALUES = Assetarray;
+     const COLUMN_NAME = 'ID';
+     const LAYER_ID = 'a9fcbda879dde279cdb8fc3ebbe74230';
+     if (VALUES){
+
+    spatialStudioProjectElement.filterFeatures(LAYER_ID, COLUMN_NAME, VALUES);
+    } else {
+    spatialStudioProjectElement.clearFilters && spatialStudioProjectElement.clearFilters(LAYER_ID);
+        }    
+
+   
+ 
+
+      }
+    </script>
 
    
 
@@ -38,12 +55,9 @@ console.log("Entered processURLParams :");
         layers-list="on">
     </spatial-studio-project>
 
-    <script>
 
-    const LAYER_ID = 'a9fcbda879dde279cdb8fc3ebbe74230';
-    const spatialStudioProjectElement = document.getElementById('spatial-studio-project-1');
-    spatialStudioProjectElement.clearFilters && spatialStudioProjectElement.clearFilters(LAYER_ID);
-    </script>
+
+   
 
 
 
