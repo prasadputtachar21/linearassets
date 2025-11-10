@@ -13,10 +13,10 @@
 
      <script>
 
-        function processURLParams() {
+    function processURLParams() {
      const LAYER_ID = 'a9fcbda879dde279cdb8fc3ebbe74230';
      const spatialStudioProjectElement = document.getElementById('spatial-studio-project-1');
-     const VALUES = Assetarray;
+
      const COLUMN_NAME = 'ID';
 
 
@@ -25,7 +25,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const assetid = urlParams.get('assetid');
         console.log (assetid);
-
+        VALUES = [1];
 
  
      if (VALUES){
