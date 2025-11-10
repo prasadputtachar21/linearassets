@@ -9,40 +9,18 @@
 </head>
 
 
-<body onload="processURLParams()">
+<body>
     
 </script> 
+        // Get the query string
+        const queryString = window.location.search;
 
+        // Create a URLSearchParams object
+        const urlParams = new URLSearchParams(queryString);
 
-    function processURLParams() {
-
-      const studioProjectElement = document.getElementById('spatial-studio-project-1');
-      console.log(studioProjectElement);
-        const urlParams = new URLSearchParams(window.location.search);
+        // Get specific parameters
         const assetid = urlParams.get('assetid');
-        console.log(assetid);
 
-        
-      const Assetarray = Array.of(assetid);
-      
-
-  
-
-const layerId = 'a9fcbda879dde279cdb8fc3ebbe74230';
-const columnName = 'ID';
-const VALUES = Assetarray;
-
- if (VALUES)
-        {
-
-            spatialStudioProjectElement.filterFeatures(LAYER_ID, COLUMN_NAME, VALUES);
-        } else {
-            spatialStudioProjectElement.clearFilters && spatialStudioProjectElement.clearFilters(LAYER_ID); 
-        }
-
-    
-
-    }
   </script> 
 
 <div style="width:100%; height: 75vh;">
