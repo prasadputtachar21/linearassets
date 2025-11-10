@@ -14,7 +14,7 @@
      <script>
 
     function processURLParams() {
-     const layerId = 'a9fcbda879dde279cdb8fc3ebbe74230';
+     
      const spatialStudioProjectElement = document.getElementById('spatial-studio-project-1');
 
      const COLUMN_NAME = 'ID';
@@ -26,6 +26,15 @@
         const assetid = urlParams.get('assetid');
         console.log (assetid);
         values = [1];
+
+        
+if (spatialStudioProjectElement && typeof spatialStudioProjectElement.clearFilters === 'function') {
+    // Call the function with the required layerId
+    const layerId = 'a9fcbda879dde279cdb8fc3ebbe74230'; // Replace with your actual layer ID
+    spatialStudioProjectElement.clearFilters(layerId);
+} else {
+    console.error("clearFilters method is not available, the element may not be loaded or the ID is incorrect.");
+}
 
 spatialStudioProjectElement.clearFilters(layerId);
 studioProjectElement.filterFeatures(layerId, columnName, values);
