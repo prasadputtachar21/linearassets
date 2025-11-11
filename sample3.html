@@ -4,6 +4,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>    
 <script src="https://spatial.withoracle.cloud/spatialstudio/api/v1/embeddable.js?ex=kobinding"></script>
 
+
+
+
+</head>
+
+
+<body>
 <script type="text/JavaScript">
 
     function processURLParams() {
@@ -21,6 +28,11 @@ const layerId = 'a9fcbda879dde279cdb8fc3ebbe74230';
         console.log (assetid);
         values = [1];
 
+  
+spatialStudioProjectElement.addEventListener('features_selected', (event) => {
+    const selectionObjects = event.detail.value;
+    console.log(JSON.stringify(selectionObjects));
+});
         
 if (spatialStudioProjectElement && typeof spatialStudioProjectElement.clearFilters === 'function') {
     // Call the function with the required layerId
@@ -38,13 +50,6 @@ studioProjectElement.filterFeatures(layerId, columnName, values);
 
       }
     </script>
-
-
-</head>
-
-
-<body>
-
 
 
 
