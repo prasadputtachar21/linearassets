@@ -37,10 +37,12 @@ th,td {
     top : 50px;
 }
 
-. rightTable {
+.rightTable {
+    display: block;
     position: absolute;
-    width : 50px;
-    height : 50px;
+    z-index: 12;
+    right: 40px;
+    top: 100px;
 }
 
 }
@@ -53,7 +55,7 @@ th,td {
 
 
 <div class ="container">
-    <div class ="leftButton"></div>
+    <div class ="leftButton">
     <button type="button" onclick="alert('Result is: Created work order sequence: 20')">Create work order operation</button>
     </div>
 
@@ -63,7 +65,7 @@ th,td {
        
                     <table>
                         <tr>
-                            <th>Asset Id: 1 </th>
+                            <th>Asset Id: P-5000</th>
                             
                         </tr>
                         <tr>
@@ -71,7 +73,7 @@ th,td {
                             
                         </tr>
                         <tr>
-                            <td>Asset Number: RS:05</td>
+                            <td>Asset Number: P-5000</td>
                             
                         </tr>
                         <tr>
@@ -79,15 +81,15 @@ th,td {
                         
                         </tr>
                             <tr>
-                            <td>Work Center Name: WC01</td>
+                            <td>Work Center Name: Production</td>
                         
                         </tr>
                         <tr>
-                            <td>Operating Org Code: ACC_ID</td>
+                            <td>Operating Org Code: 411</td>
                             
                         </tr>
                         <tr>
-                            <td>Operating Org Name: Local Council</td>
+                            <td>Operating Org Name: MNT B</td>
                             
                         </tr>
                 
