@@ -11,7 +11,7 @@ function WOOperationFunction() {
         const postRequest = new XMLHttpRequest();
         postRequest.open("POST", restUrl,false);
         postRequest.setRequestHeader('Content-Type', 'application/json') ;
-        pwd = window.btoa("scm_impl" + "." + "P^F6gy3*");
+        pwd = window.btoa('"scm_impl" + ":" + "P^F6gy3*"');
         postRequest.setRequestHeader('Authorization', 'Basic' + pwd);
         var payload = { "OperationSequenceNumber" : "20" + "OperationName" + "SD_OPER_06", "CountPointOperationFlag" :"Y", "WorkCenterCode" : "WC_PROD"};
         var data = JSON.stringify(payload);
