@@ -26,7 +26,7 @@ function WOOperationFunction() {
         var data = JSON.stringify(payload);
         postRequest.send(data);
         if(postRequest.status ===201){
-            var responseText = JSON.parse(xmlhttp.responseText);
+            var responseText = JSON.parse(postRequest.responseText);
             alert('Result is: Created work order sequence: 20')
         }   
 
