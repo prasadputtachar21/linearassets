@@ -6,7 +6,23 @@
 <script>
 
 function WOOperationFunction() {
-    alert('Result is: Created work order sequence: 20');
+        restUrl = "https://fa-eqkh-dev4-saasfademo1.ds-fa.oraclepdemos.com/fscmRestApi/resources/latest/maintenanceWorkOrders/22091/child/WorkOrderOperation";
+        postRequest = new XMLHttpRequest);
+        postRequest.open("POST", restUrl,false);
+        postRequest.setRequestHeader('Content-Type', 'application/json') ;
+        pwd = window.btoa("scm_impl" + "." + "P^F6gy3*");
+        postRequest.setRequestHeader('Authorization', 'Basic' + pwd);
+        var payload = { "OperationSequenceNumber" : "20" + "OperationName" + "SD_OPER_06", "CountPointOperationFlag" :"Y", "WorkCenterCode" : "WC_PROD"};
+        var data = JSON.stringify(payload);
+        xmlhttp.send(data);
+        if(xmlhttp.status ===201){
+            var responseText = JSON.parse(xmlhttp.responseText);
+            alert('Result is: Created work order sequence: 20')
+        }   
+
+
+
+   
  
 }
 </script>
