@@ -16,7 +16,7 @@ function WOOperationFunction() {
         var payload = { "OperationSequenceNumber" : "20" + "OperationName" + "SD_OPER_06", "CountPointOperationFlag" :"Y", "WorkCenterCode" : "WC_PROD"};
         var data = JSON.stringify(payload);
         postRequest.send(data);
-        if(xmlhttp.status ===201){
+        if(postRequest.status ===201){
             var responseText = JSON.parse(xmlhttp.responseText);
             alert('Result is: Created work order sequence: 20')
         }   
