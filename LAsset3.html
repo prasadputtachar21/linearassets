@@ -15,9 +15,14 @@ function WOOperationFunction() {
         
         postRequest.setRequestHeader("Authorization", "Basic c2NtX2ltcGw6UF5GNmd5Myo=");
 
-      
+        const payload = {
+            "OperationSequenceNumber": 20,
+            "OperationName": "SD_OPER_06",
+            "CountPointOperationFlag": "Y",
+            "WorkCenterCode": "WC_PROD"
+        };
 
-        var payload =  "{\n\"OperationSequenceNumber\":20,\n\n\"OperationName\":\"SD_OPER_06\",\n\n\"CountPointOperationFlag\":\"Y\",\n\n\"WorkCenterCode\":\"WC_PROD\"\n\n\n}"
+        
         var data = JSON.stringify(payload);
         postRequest.send(data);
         if(postRequest.status ===201){
