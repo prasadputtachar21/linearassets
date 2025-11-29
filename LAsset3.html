@@ -1,0 +1,136 @@
+<html>
+<head>
+<script src="https://requirejs.org/docs/release/2.3.7/minified/require.js"></script>    
+<script src="https://spatial.withoracle.cloud/spatialstudio/api/v1/embeddable.js"></script>
+
+<script>
+
+    function WOOperationFunction() {
+  restUrl = "https://fa-eqkh-dev4-saasfademo1.ds-fa.oraclepdemos.com/fscmRestApi/resources/latest/maintenanceWorkOrders/22091/child/WorkOrderOperation";
+postRequest = new XMLHttpRequest);
+postRequest.open("POST", restUrl,false);
+postRequest.setRequestHeader('Content-Type', 'application/json') ;
+pwd = window.btoa(scm_impl + "." + P^F6gy3*);
+postRequest.setRequestHeader('Authorization', 'Basic' + pwd);
+var payload = { "OperationSequenceNumber" : "20" + "OperationName" + "SD_OPER_06", "CountPointOperationFlag" :
+"Y", "WorkCenterCode" : "WC_PROD"};
+var data = JSON.stringify(payload);
+xmlhttp.send(data);
+if(xmlhttp.status ===201){
+var responseText = JSON.parse(xmlhttp.responseText);
+alert('Result is: Created work order sequence: 20')
+}
+}
+</script>
+
+<style>
+
+<style>
+
+
+
+table {
+  width:30%; /* Make the table fill the container */
+  border-collapse: collapse; /* Collapse borders for a single line effect */
+}
+
+th, td {
+  border: 1px solid black; /* Border for table cells */
+  padding: 8px;
+  text-align: left;
+}
+
+th,td {
+  background-color: #f2f2f2;
+}
+
+. container {
+    position: relative;
+    width: 100%;
+    height : 75vh; 
+
+}
+
+.leftButton {
+    display: block;
+    position: absolute;
+    z-index: 123;
+    top: 100px;
+    left: 40px;
+}
+
+.rightTable {
+    display: block;
+    position: absolute;
+    z-index: 12;
+    right: 40px;
+    top: 100px;
+}
+
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class ="container">
+   
+   
+    <spatial-studio-project 
+        id="spatial-studio-project-1"
+        server-url="https://spatial.withoracle.cloud/spatialstudio/"
+        project-id="1e288bced28348911a1c0212521a2b7f" 
+        token="eyJ0eXAiOiJzZ3RlY2hfand0IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI3YTYzMGU2ODhkZDQ0Y2YzYjhjYzgxNTQ3NzRhODJkYSIsInN0dWRpb190ZW5hbnRfaWRlbnRpZmllciI6IkdMT0JBTDpAZGF0YWJhc2VAOkBkZWZhdWx0QCIsIm5iZiI6MTc2NDM0MjUzNSwic2NvcGUiOiJyZXNvdXJjZS5yZWFkX29ubHk6cmVzb3VyY2UudHlwZS5lbWJlZGRlZF9wdWJsaXNoZWRfcHJvamVjdCIsImlzcyI6Ik9yYWNsZVNwYXRpYWxTdHVkaW8iLCJleHAiOjE3NjQ5NDI0NzUsImlhdCI6MTc2NDM0MjUzNSwianRpIjoiMTY0ODc3MmEtNzU4MS00MThkLTgwMGQtMDE5MGJhOGU1OTk2Iiwic3R1ZGlvX29pZCI6IjQyNzZiZTA5NmY5YTg0N2I5NjcyYjBlMzJiMTM5ODkyIn0.LD8Dojs1yX5Ua2yUTEDO6LD5m2ls2bG-pRNA7ZPNUlQkIv5WJfOpywY8pqxlnAYoyTTxFCAomyAMQQHTtI8NATFFKWyLpkbQcnijDo1hsXFq74ig5bQ3cKcsZYZt-WD2NtCVFnVvbQqB6WsqT8BVhLryiaVM26mU_EusLqxe4m1ib3e7x6Rd6resr0BUGEsnGZGsol4eO6COoCt3mY8xy8Q-7AIM5fgXSzycC8TN9t2sEp5s5A3osj6MO47XatwvjVUecE0EfDu3GJHACKIXJbLeqB3KcOvOYRd0oSnhyTIfWzwNGfa7h5Lo3EXNz42b7PvGNsAEuCBSux3tTYDV8Q"
+        project-header="off"
+        layers-list="on">
+         
+    </spatial-studio-project>
+    
+
+ <div class ="leftButton">
+    <button type="button" onclick="WOOperationFunction()">Create work order operation</button>
+    </div>
+
+
+       <div class ="rightTable">
+
+       
+                    <table>
+                        <tr>
+                            <th>Asset Id: P-5000</th>
+                            
+                        </tr>
+                        <tr>
+                            <td>Description: Bourke Rd Segment 1 </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Asset Number: P-5000</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Work Center Id: 300100186599356</td>
+                        
+                        </tr>
+                            <tr>
+                            <td>Work Center Name: Production</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Operating Org Code: 411</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Operating Org Name: MNT B</td>
+                            
+                        </tr>
+                
+                </table>
+     </div>
+
+</div>
+</body>
+</html>
