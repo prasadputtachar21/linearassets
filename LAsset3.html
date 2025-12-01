@@ -14,8 +14,8 @@ function WOOperationFunction() {
         pwd = window.btoa("scm_impl" + ":" + "w?4u#AL7");
         console.log(pwd);
         
-        
-        postRequest.setRequestHeader("Authorization", "Basic c2NtX2ltcGw6dz80dSNBTDc=");
+        pwd1 = "Basic " + pwd
+        postRequest.setRequestHeader("Authorization", pwd1);
 
         const payload = {
             "OperationSequenceNumber": 20,
