@@ -11,9 +11,11 @@ function WOOperationFunction() {
         const postRequest = new XMLHttpRequest();
         postRequest.open("POST", restUrl,false);
         postRequest.setRequestHeader('Content-Type', 'application/json') ;
-        pwd = window.btoa('"scm_impl" + ":" + "P^F6gy3*"');
+        pwd = window.btoa("scm_impl" + ":" + "w?4u#AL7");
+        console.log(pwd);
         
-        postRequest.setRequestHeader("Authorization", "Basic c2NtX2ltcGw6UF5GNmd5Myo=");
+        
+        postRequest.setRequestHeader("Authorization", "Basic c2NtX2ltcGw6dz80dSNBTDc=");
 
         const payload = {
             "OperationSequenceNumber": 20,
@@ -114,7 +116,7 @@ th,td {
        
                     <table>
                         <tr>
-                            <th>Asset Id: P-5000</th>
+                            <th>Asset Id: 100000755648048</th>
                             
                         </tr>
                         <tr>
@@ -130,7 +132,7 @@ th,td {
                         
                         </tr>
                             <tr>
-                            <td>Work Center Name: Production</td>
+                            <td>Work Center Code: WC_PROD</td>
                         
                         </tr>
                         <tr>
