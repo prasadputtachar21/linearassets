@@ -68,7 +68,7 @@ th,td {
 }
 
 .leftButton {
-    display: none;
+    /* display: block; */
     position: absolute;
     z-index: 123;
     top: 100px;
@@ -76,7 +76,7 @@ th,td {
 }
 
 .rightTable {
-    display: none;
+    /* display: block; */
     position: absolute;
     z-index: 12;
     right: 40px;
@@ -106,12 +106,12 @@ th,td {
     </spatial-studio-project>
     
 
- <div class ="leftButton">
+ <div class ="leftButton" style="display: none;">
     <button type="button" onclick="WOOperationFunction()">Create work order operation</button>
     </div>
 
 
-       <div class ="rightTable">
+       <div class ="rightTable"  style="display: none;">
 
        
                     <table>
