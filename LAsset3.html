@@ -153,29 +153,29 @@ th,td {
 const studioProjectElement = document.getElementById('spatial-studio-project-1');
 
 studioProjectElement.addEventListener('features_selected', (event) => {
-    // event.detail.value is likely an array of selection objects
+    // event.detail.value is an array of selection objects
     const selectionObjectsArray = event.detail.value;
     console.log(JSON.stringify(selectionObjectsArray));
 
-    // Check if the array has items and access the first one's datasetId
-    if (selectionObjectsArray && selectionObjectsArray.length > 0 && selectionObjectsArray[0].datasetId) {
-        // Get the FIRST element with the class "rightTable"
-        const showTable = document.getElementsByClassName("rightTable")[0];
-         const showButton = document.getElementsByClassName("leftButton")[0];
+    // FIX 1: Access the FIRST element using index [0] immediately after the call
+    const showTable = document.getElementsByClassName("rightTable")[0];
+    const showButton = document.getElementsByClassName("leftButton")[0];
 
-        // Ensure the element was found before trying to change its style
-        if (showTable) {
+    // Check if we found the elements and determine visibility
+    if (showTable && showButton) {
+        if (selectionObjectsArray.length > 0) {
+            // Show elements
             showTable.style.display = "block";
-        } else {
-showTable.style.display = "none";
-}
-
-         if (showButton) {
             showButton.style.display = "block";
         } else {
-showButton.style.display = "none";
-}
-
+            // Hide elements
+            console.log("No features selected, hiding elements.");
+            showTable.style.display = "none";
+            showButton.style.display = "none";
+        }
+    } else {
+        // Log an error if the elements with these classes don't exist in your HTML
+        console.error("Missing required DOM elements with class 'rightTable' or 'leftButton'.");
     }
 });
 
