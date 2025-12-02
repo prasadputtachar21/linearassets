@@ -166,11 +166,15 @@ studioProjectElement.addEventListener('features_selected', (event) => {
         // Ensure the element was found before trying to change its style
         if (showTable) {
             showTable.style.display = "block";
-        }
+        } else {
+showTable.style.display = "none";
+}
 
          if (showButton) {
             showButton.style.display = "block";
-        }
+        } else {
+showButton.style.display = "none";
+}
 
     }
 });
