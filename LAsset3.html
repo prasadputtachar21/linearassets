@@ -68,7 +68,7 @@ th,td {
 }
 
 .leftButton {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 123;
     top: 100px;
@@ -76,7 +76,7 @@ th,td {
 }
 
 .rightTable {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 12;
     right: 40px;
@@ -148,5 +148,33 @@ th,td {
      </div>
 
 </div>
+
+<script>
+const studioProjectElement = document.getElementById('spatial-studio-project-1');
+
+studioProjectElement.addEventListener('features_selected', (event) => {
+    // event.detail.value is likely an array of selection objects
+    const selectionObjectsArray = event.detail.value;
+    console.log(JSON.stringify(selectionObjectsArray));
+
+    // Check if the array has items and access the first one's datasetId
+    if (selectionObjectsArray && selectionObjectsArray.length > 0 && selectionObjectsArray[0].datasetId) {
+        // Get the FIRST element with the class "rightTable"
+        const showTable = document.getElementsByClassName("rightTable")[0];
+         const showButton = document.getElementsByClassName("leftButton")[0];
+
+        // Ensure the element was found before trying to change its style
+        if (showTable) {
+            showTable.style.display = "block";
+        }
+
+         if (showButton) {
+            showButton.style.display = "block";
+        }
+
+    }
+});
+
+</script>
 </body>
 </html>
